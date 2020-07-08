@@ -60,6 +60,35 @@ It made us some example tests for our use.
 That’s all. Now we’re ready to write our first test!
 
 
+## Write and run the first Test
+We’ve installed Cypress, so we can now run our first test.
+
+To write our first test, we’ll create a file inside the “integration” folder and write the test code inside it.
+
+We right-click to create a new file and we will call it “Test.spec.js”.
+
+But before we start writing the code itself, and since I’m using Visual Studio Code, we want some autocomplete support for Cypress.
+
+So  do the following at the top of the file:
+`    /// <reference types="cypress" />`
+
+This triple comment line will tell VS Code for which package it needs autocomplete support for.
+
+To write a test, we need a test runner, and we’ll be using a test runner called Mocha
+
+Mocha comes built-in with Cypress, so we don’t need to install it. Moreover, it’s the only test runner that comes with Cypress. You must use it.
+
+Okay, to write a test, we write it inside an it function, like this
+
+    /// <reference types="cypress" />
+    it('should navigate to the application', () => {
+      cy.visit('http://automationpractice.com/index.php’)
+    ')
+    })
+Yup. And what does this test do? It just visits our app, and well, that’s it!
+Let’s try and run it, again using npx cypress open:
+
+    npx cypress open
 
 
-
+Yes! It ran! And passed. 
